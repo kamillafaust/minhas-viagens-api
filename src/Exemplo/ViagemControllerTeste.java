@@ -7,10 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/viagem")
-public class ViagemController {
+public class ViagemControllerTeste {
 
     //retorna um json do tipo viagem
-    @GetMapping //se nao passar nada, quando acessarmos a rota /viagem, ele já será acessado
+    @GetMapping //se nao passar nada, quando acessarmos a rota /viagem, ele já será acessado, classe q responde requisições rest ou http
+    @RequestMapping("/viagem") //é o caminho
     public ResponseEntity<Viagem> mostrarViagem() {
         Viagem viagem = new Viagem("João Pessoa", "Maldivas");
 
